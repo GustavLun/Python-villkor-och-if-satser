@@ -14,31 +14,31 @@
 # else:
 #     print("You are very poor")
 
-# Uppgift 1
-is_member = False
-level1 = 100
-level2 = 300
-discount = 0
-
-
-price = input(" Välkommen, köp något dyrt" )
-check_membership = input(" Är de medlem ? Svar med ja eller nej ")
-if check_membership == "ja":
-    is_member =True
-else:
-    is_member = False
-price = float(price)
-if (is_member == True) and price >= level1 and price < level2:
-    print("Grattis! Du har avancerat till nivå 1 och du får 10% rabatt.")
-    discount = discount + 10
-elif (is_member == True) and price >= level2 :
-    print("Grattis Du har avancerat till nivå 2 och får 25% rabatt")
-    discount = discount + 25
-else:
-    print("Tyvärr du får inga rabatter")
-
-final_price = price * (100 -discount) / 100
-print("Ditt slutpris blir....." +str(final_price))
+# # Uppgift 1
+# is_member = False
+# level1 = 100
+# level2 = 300
+# discount = 0
+#
+#
+# price = input(" Välkommen, köp något dyrt" )
+# check_membership = input(" Är de medlem ? Svar med ja eller nej ")
+# if check_membership == "ja":
+#     is_member =True
+# else:
+#     is_member = False
+# price = float(price)
+# if (is_member == True) and price >= level1 and price < level2:
+#     print("Grattis! Du har avancerat till nivå 1 och du får 10% rabatt.")
+#     discount = discount + 10
+# elif (is_member == True) and price >= level2 :
+#     print("Grattis Du har avancerat till nivå 2 och får 25% rabatt")
+#     discount = discount + 25
+# else:
+#     print("Tyvärr du får inga rabatter")
+#
+# final_price = price * (100 -discount) / 100
+# print("Ditt slutpris blir....." +str(final_price))
 
 # 1.Vad är syftet med koden?
 # Syftet med koden är att baserat på värdet av det kunden betalar ge kunden olika nivåer som direkt är kopplat till rabatt på köp.
@@ -63,3 +63,44 @@ print("Ditt slutpris blir....." +str(final_price))
 # 6.Diskutera möjliga förbättringar på koden.
 # Genom att lägga till en funktion för att checka om köparen är medlem eller ej kan vi inkludera is_member som en variabel som skall uppfyllas för att köra if satserna på rabatten.
 # Därav kan vi förfina och skriva om if satserna för att ge mer kontroll
+
+# 2 Balder
+
+# rider_height = int(input("Hur lång är du? Svara i CM "))
+# if rider_height < 130:
+#     print(" Tyvärr du är för kort och får ej åka ")
+# else:
+#     print(" Du är lång nog för att åka ")
+
+    # Vi måste testa 3 värden för att kunna kolla om exakt värde fungerar samt över eller under. Det finns totalt 3 scenarios att testa.
+    # Vi använder just dessa värden för att ett värde testar under gränsen, en den exakta gränsen och den sista över gränsen.
+    # Att lägga till 129 CM är onödigt och testas redan i genom att skriva 121.
+
+    # 3 Sportresultat
+
+#Version1
+# goals_tottenham = int(input("Hur många mål gjorde Tottenham? "))
+# goals_liverpool = int(input("Hur många mål gjorde Liverpool? "))
+#
+# if goals_tottenham > goals_liverpool:
+#         print(" Matchen är över, räknar ut resultatet ")
+#         print(f" Tottenham gjorde {goals_tottenham} mål och Liverpool gjorde {goals_liverpool} ")
+#         print(f"Tottenham gjorde {goals_tottenham - goals_liverpool} mer mål än Liverpool")
+#         print(" Tottenham vann! ")
+# elif goals_tottenham < goals_liverpool:
+#         print(" Matchen är över, räknar fram resultatet")
+#         print(f"Tottenham gjorde {goals_tottenham} och Liverpool gjorde {goals_liverpool}")
+#         print(f" Liverpool gjorde {goals_liverpool - goals_tottenham} mer mål än Tottenham)")
+#         print(" Liverpool vann! ")
+# else:
+#          print(" Matchen är över, räknar fram resultatet")
+#          print(f" Tottenham gjorde {goals_tottenham} och Liverpool gjorde {goals_liverpool} ")
+#          print(" Its a tie! ")
+
+# 4 Temperaturomvandling
+# grader_celsius = int(input(" Skriv in antal grader celsius "))
+# farenheit = grader_celsius * 9 / 5 + 32
+# print(f" Det är {grader_celsius} vilket i Farenheit är {farenheit}")
+
+Temp_formula = input(" Använder du celsius eller farenheit? ")
+
