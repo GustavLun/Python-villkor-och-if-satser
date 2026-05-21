@@ -103,4 +103,18 @@
 # print(f" Det är {grader_celsius} vilket i Farenheit är {farenheit}")
 
 Temp_formula = input(" Använder du celsius eller farenheit? ")
+if Temp_formula == "celsius":
+    celsius = int(input(" Skriv i celsius hur många grader de är"))
+    farenheit = (celsius * 9 / 5) + 32
+    print(f" De motsvarar {farenheit} grader Farenheit")
 
+elif Temp_formula == "farenheit":
+    farenheit = int(input(" Skriv i farenheit hur många grader det är "))
+    celsius = (farenheit - 32) * 5 / 9
+    print(f" Det motsvarar {celsius} grader celsius")
+
+if celsius <10 or farenheit <50:
+    print(" De är kallt ute ta på dig vinterkläder")
+
+elif celsius >=20 or farenheit >=68:
+    print("Det är varmt ute, packa badkläder ")
