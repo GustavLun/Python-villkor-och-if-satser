@@ -102,19 +102,56 @@
 # farenheit = grader_celsius * 9 / 5 + 32
 # print(f" Det är {grader_celsius} vilket i Farenheit är {farenheit}")
 
-Temp_formula = input(" Använder du celsius eller farenheit? ")
-if Temp_formula == "celsius":
-    celsius = int(input(" Skriv i celsius hur många grader de är"))
-    farenheit = (celsius * 9 / 5) + 32
-    print(f" De motsvarar {farenheit} grader Farenheit")
+# Temp_formula = input(" Använder du celsius eller farenheit? ")
+# if Temp_formula == "celsius":
+#     celsius = int(input(" Skriv i celsius hur många grader de är"))
+#     farenheit = (celsius * 9 / 5) + 32
+#     print(f" De motsvarar {farenheit} grader Farenheit")
+#
+# elif Temp_formula == "farenheit":
+#     farenheit = int(input(" Skriv i farenheit hur många grader det är "))
+#     celsius = (farenheit - 32) * 5 / 9
+#     print(f" Det motsvarar {celsius} grader celsius")
+#
+# if celsius <10 or farenheit <50:
+#     print(" De är kallt ute ta på dig vinterkläder")
+#
+# elif celsius >=20 or farenheit >=68:
+#     print("Det är varmt ute, packa badkläder ")
 
-elif Temp_formula == "farenheit":
-    farenheit = int(input(" Skriv i farenheit hur många grader det är "))
-    celsius = (farenheit - 32) * 5 / 9
-    print(f" Det motsvarar {celsius} grader celsius")
+# 5 Miniräknare 1
+# tal1 = int(input(" SKriv in ett heltal "))
+# tal2 = int(input(" SKriv in ett till heltal "))
+# tal3 = int(input(" SKriv in ett sista heltal "))
+# print(f" Summan av dina tal blir {tal1+tal2+tal3}")
+#2.
+tal1 = int(input(" SKriv in ett heltal "))
+tal2 = int(input(" SKriv in ett till heltal "))
+tal3 = int(input(" SKriv in ett sista heltal "))
+alla_lika = False
+alla_olika = True
+if tal1 > tal2 and tal1> tal3:
+    print(f"Första talet som var {tal1} är större än tal2 som var {tal2} och tal3 som var {tal3}")
+elif tal2 > tal1 and tal2 > tal3:
+    print(f"Det andra talet som var {tal2} är större än tal1 som var {tal1} och tal3 som var {tal3}")
+elif tal3 > tal1 and tal3 > tal2:
+    print(f"tal3 som var {tal3} är större än tal 1 som var {tal1} och tal2 som var {tal2}")
+else:#Else aggerar för stop för hela koden genom att byta innehåll på "alla lika" och "alla olika" till True och False.
+    alla_lika = True #att ändra dena till True stoppar nedstående if satser.
+    alla_olika = False # Att ändra denna till False stoppar nedstående if satser.
+    print(f"Tal 1, 2 och 3 är lika stora och alla tal var {tal1, tal2, tal3}")
 
-if celsius <10 or farenheit <50:
-    print(" De är kallt ute ta på dig vinterkläder")
+if alla_lika == False and (tal1 == tal2 or tal3 == tal2 or tal1 == tal3):
+    print(f"två av talen hade samma värden {tal1, tal2, tal3}")
 
-elif celsius >=20 or farenheit >=68:
-    print("Det är varmt ute, packa badkläder ")
+if alla_olika == True and ((tal1 > tal2 and tal1 < tal3) or (tal1 < tal2 and tal1 > tal3)):
+    print(f" Det mellersta talet är {tal1}")
+
+elif alla_olika == True and ((tal2 > tal1 and tal2 < tal3) or (tal2 < tal1 and tal2 > tal3)):
+    print(f"Det mellersta talet är {tal2}")
+
+elif alla_olika == True and ((tal3) > tal2 and tal3 < tal1 or (tal3 < tal2 and tal3 > tal1)):
+    print(f"Det mellersta talet är {tal3}")
+
+
+
